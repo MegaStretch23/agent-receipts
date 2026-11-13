@@ -1,0 +1,82 @@
+{
+  "receipt_version": 1,
+  "tool": "agent-receipts",
+  "repo": ".",
+  "head": "658e5f7f5b22b9a8caac3c20b6b2d03abd1a27a8",
+  "base": null,
+  "test_cmd": "python3 -c 'import sys; sys.exit(1)'",
+  "summary": {
+    "total": 8,
+    "verified": 4,
+    "contradicted": 4,
+    "unverifiable": 0
+  },
+  "verdict": "CONTRADICTED",
+  "claims": [
+    {
+      "type": "function_added",
+      "target": "divide",
+      "status": "CONTRADICTED",
+      "evidence": "no function named divide found in any source file",
+      "source": "text",
+      "text": "I updated `calc.py` and added a function `divide`."
+    },
+    {
+      "type": "file_modified",
+      "target": "calc.py",
+      "status": "VERIFIED",
+      "evidence": "git shows calc.py modified (last commit plus working tree)",
+      "source": "text",
+      "text": "I updated `calc.py` and added a function `divide`."
+    },
+    {
+      "type": "file_created",
+      "target": "notes.md",
+      "status": "VERIFIED",
+      "evidence": "notes.md exists and git shows it added (last commit plus working tree)",
+      "source": "text",
+      "text": "I created `notes.md` and `docs/usage.md`."
+    },
+    {
+      "type": "file_created",
+      "target": "docs/usage.md",
+      "status": "CONTRADICTED",
+      "evidence": "docs/usage.md does not exist",
+      "source": "text",
+      "text": "I created `notes.md` and `docs/usage.md`."
+    },
+    {
+      "type": "package_installed",
+      "target": "requests",
+      "status": "VERIFIED",
+      "evidence": "requests is declared in pyproject.toml",
+      "source": "text",
+      "text": "Installed `requests`."
+    },
+    {
+      "type": "package_installed",
+      "target": "numpy",
+      "status": "CONTRADICTED",
+      "evidence": "numpy not declared in pyproject.toml",
+      "source": "text",
+      "text": "Installed numpy as well."
+    },
+    {
+      "type": "tests_pass",
+      "target": "",
+      "status": "CONTRADICTED",
+      "evidence": "re-ran `python3 -c 'import sys; sys.exit(1)'`: exit 1",
+      "source": "text",
+      "text": "All tests pass."
+    },
+    {
+      "type": "commit_made",
+      "target": "add multiply and notes",
+      "status": "VERIFIED",
+      "evidence": "commit 658e5f7 add multiply and notes matches the message",
+      "source": "text",
+      "text": "I committed the work with message \"add multiply and notes\"."
+    }
+  ],
+  "skipped": []
+}

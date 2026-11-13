@@ -1,0 +1,14 @@
+# Agent receipt
+
+- Repo: `.` at `658e5f7f5`
+- Verdict: **OK** - 5 verified, 0 contradicted, 0 unverifiable (of 5)
+- Test command: `python3 -c 'import calc; assert calc.add(1,2)==3'`
+
+| # | Claim | Status | Evidence |
+|---|-------|--------|----------|
+| 1 | modified file `calc.py` | VERIFIED | git shows calc.py modified (last commit plus working tree) |
+| 2 | created file `notes.md` | VERIFIED | notes.md exists and git shows it added (last commit plus working tree) |
+| 3 | added function `multiply` | VERIFIED | function multiply defined at calc.py:5 (ast); file changed in window (last commit plus working tree) |
+| 4 | tests pass | VERIFIED | re-ran `python3 -c 'import calc; assert calc.add(1,2)==3'`: exit 0 |
+| 5 | commit made | VERIFIED | commit 658e5f7 add multiply and notes matches the message |
+exit code: 0

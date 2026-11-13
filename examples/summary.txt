@@ -1,0 +1,3 @@
+I updated `calc.py` and added a function `divide`. I created `notes.md` and `docs/usage.md`.
+Installed `requests`. Installed numpy as well. All tests pass.
+I committed the work with message "add multiply and notes". I did not touch `scratch.txt`.

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-receipts"
+version = "0.1.0"
+description = "Check what an AI coding agent said it did against the git repo: files, tests, functions, packages, commits. Deterministic, no model calls"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["ai-agents", "llm", "verification", "git", "cli"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/MegaStretch23/agent-receipts"
+
+[project.scripts]
+agent-receipts = "agent_receipts.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

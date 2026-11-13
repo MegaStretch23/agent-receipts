@@ -1,0 +1,58 @@
+{
+  "receipt_version": 1,
+  "tool": "agent-receipts",
+  "repo": ".",
+  "head": "658e5f7f5b22b9a8caac3c20b6b2d03abd1a27a8",
+  "base": null,
+  "test_cmd": "python3 -c 'import calc; assert calc.add(1,2)==3'",
+  "summary": {
+    "total": 5,
+    "verified": 5,
+    "contradicted": 0,
+    "unverifiable": 0
+  },
+  "verdict": "OK",
+  "claims": [
+    {
+      "type": "file_modified",
+      "target": "calc.py",
+      "status": "VERIFIED",
+      "evidence": "git shows calc.py modified (last commit plus working tree)",
+      "source": "json",
+      "text": ""
+    },
+    {
+      "type": "file_created",
+      "target": "notes.md",
+      "status": "VERIFIED",
+      "evidence": "notes.md exists and git shows it added (last commit plus working tree)",
+      "source": "json",
+      "text": ""
+    },
+    {
+      "type": "function_added",
+      "target": "multiply",
+      "status": "VERIFIED",
+      "evidence": "function multiply defined at calc.py:5 (ast); file changed in window (last commit plus working tree)",
+      "source": "json",
+      "text": ""
+    },
+    {
+      "type": "tests_pass",
+      "target": "",
+      "status": "VERIFIED",
+      "evidence": "re-ran `python3 -c 'import calc; assert calc.add(1,2)==3'`: exit 0",
+      "source": "json",
+      "text": ""
+    },
+    {
+      "type": "commit_made",
+      "target": "",
+      "status": "VERIFIED",
+      "evidence": "commit 658e5f7 add multiply and notes matches the message",
+      "source": "json",
+      "text": ""
+    }
+  ],
+  "skipped": []
+}

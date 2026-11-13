@@ -1,0 +1,7 @@
+[
+  {"type": "file_modified", "target": "calc.py"},
+  {"type": "file_created", "target": "notes.md"},
+  {"type": "function_added", "target": "multiply"},
+  {"type": "tests_pass"},
+  {"type": "commit_made", "message": "add multiply and notes"}
+]

@@ -1,0 +1,17 @@
+# Agent receipt
+
+- Repo: `.` at `658e5f7f5`
+- Verdict: **CONTRADICTED** - 4 verified, 4 contradicted, 0 unverifiable (of 8)
+- Test command: `python3 -c 'import sys; sys.exit(1)'`
+
+| # | Claim | Status | Evidence |
+|---|-------|--------|----------|
+| 1 | added function `divide` | CONTRADICTED | no function named divide found in any source file |
+| 2 | modified file `calc.py` | VERIFIED | git shows calc.py modified (last commit plus working tree) |
+| 3 | created file `notes.md` | VERIFIED | notes.md exists and git shows it added (last commit plus working tree) |
+| 4 | created file `docs/usage.md` | CONTRADICTED | docs/usage.md does not exist |
+| 5 | installed package `requests` | VERIFIED | requests is declared in pyproject.toml |
+| 6 | installed package `numpy` | CONTRADICTED | numpy not declared in pyproject.toml |
+| 7 | tests pass | CONTRADICTED | re-ran `python3 -c 'import sys; sys.exit(1)'`: exit 1 |
+| 8 | commit made `add multiply and notes` | VERIFIED | commit 658e5f7 add multiply and notes matches the message |
+exit code: 1
